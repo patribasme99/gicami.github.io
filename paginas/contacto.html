@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="icon" href="../imagenes/logo.ico">
+    <title>GICAMI</title>
+</head>
+<body>
+    <header id="menu">
+        <a href="../index.html" class="logo">GICAMI</a>
+        <input type="checkbox" id="menu_hamburguer">
+        <label for="menu_hamburguer">MENU</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="#">FIGURAS +</a>
+                    <ul>
+                        <li><a href="gigantes.html">GIGANTES</a></li>
+                        <li><a href="cabezudos.html">CABEZUDOS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="text">CONTACTA<br>CON NOSOTROS</div>
+            <form action="#" method="post">
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label>Nombre</label>
+                    </div>
+                    <div class="input-data">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label>Apellido</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="email" required>
+                        <div class="underline"></div>
+                        <label>Correo electrónico</label>
+                    </div>
+                    <div class="input-data">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label>Teléfono</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data textarea">
+                        <textarea cols="30" rows="10" required></textarea>
+                        <div class="underline"></div>
+                        <label>Mensaje</label>
+                    </div>
+                </div>
+                <div class="form-row submit-btn">
+                    <div class="input-data">
+                        <div class="inner"></div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container_footer">
+            <!-- Ocupará la primera fila del Footer -->
+            <div class="section_colaborador">
+                <h2>COLABORADORES OFICIALES</h2>
+                <div class="img_colaborador">
+                    <img src="../imagenes/ayto-miranda.jpg" alt="ayto-miranda">
+                    <img src="../imagenes/vivir-miranda.jpg" alt="vivir-miranda">
+                    <img src="../imagenes/orbecopi.jpg" alt="orbecopi">
+                </div>
+            </div>
+
+            <!-- Ocupará la segunda fila del Footer -->
+            <!-- Primera columna -->
+            <div class="about_us">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos la Comparsa de Gigantes y Cabezudos de Miranda de Ebro. Nuestra Comparsa se fundó en 1942 y con el paso del tiempo ha ido cayendo en el olvido.
+                    En 2021, el actual presidente, Diego García, retoma la comparsa con el objetivo de revivir esta bonita tradición.
+                </p>
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/gigantes.mde/"><i class="fa fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/gigantes_mde/"><i class="fa fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/gigantes.mde/"><i class="fa fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCCuppzvpkqZU08RCIbNk3lQ"><i class="fa fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <!-- Segunda columna -->
+            <div class="quick_links">
+                <h2>Otros Links</h2>
+                <ul>
+                    <li><a href="historia.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Tercera columna -->
+            <div class="contact_us">
+                <h2>Contacto</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <span>Calle Ircio, Miranda de Ebro, Burgos</span>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <span>+34 653 88 55 60</span>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <span>gigantesmde@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright"><p>Copyright &#169; 2022 Comparsa de Gigantes y Cabezudos de Miranda de Ebro</p></div>
+</body>
+</html>
+<script src="../js/app.js"></script>

@@ -1,0 +1,823 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: end;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ESTILOS DEL HEADER */
+header {
+    grid-column: 1/4;
+    grid-row: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: #fff;
+    color: #333;
+}
+
+header .navbar ul li ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    background: #333;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: #333;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+
+#menu_hamburguer {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: initial;
+}
+
+#menu_hamburguer:checked ~.navbar {
+    display: initial;
+}
+
+/* ESTILOS DEL FOOTER */
+footer {
+    grid-column: 1/4;
+    grid-row: 3;
+}
+
+footer .container_footer {
+    padding: 30px;
+    display: grid;
+    background: #161616;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+}
+
+footer .container_footer h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff3b3b;
+    width: 375px;
+}
+
+footer .container_footer .section_colaborador {
+    margin: auto;
+}
+
+footer .container_footer .section_colaborador .img_colaborador {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container_footer .section_colaborador .img_colaborador img {
+    margin: 10px auto;
+    width: 350px;
+}
+
+footer .container_footer .about_us p {
+    color: #fff;
+}
+
+.sci {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 10px
+}
+
+.sci li a {
+    width: 48px;
+    height: 48px;
+    background: #2c2c2c;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.sci li a:hover {
+    background: #464646;
+}
+
+.sci li a .fa {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .container_footer .quick_links {
+    position: relative;
+}
+
+footer .container_footer .quick_links li a {
+    color: #f7f7f7;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .container_footer .quick_links li a:hover {
+    color: #ff3b3b;
+}
+
+footer .container_footer .contact_us .info {
+    position: relative;
+}
+
+footer .container_footer .contact_us .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+footer .container_footer .contact_us .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .container_footer .contact_us .info li span {
+    color: #fff;
+}
+
+.copyright {
+    grid-column: 1/5;
+    grid-row: 4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #000;
+    padding: 8px 0;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* ESTILOS DE LA PÁGINA DE INICIO */
+.inicio {
+    background: #DCDFD9;
+    color: #1b3231;
+    grid-column: 1/4;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.inicio .slider-frame {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 100% 100% 100% 100% 100%;
+    animation: mover 25s infinite ease-in-out;
+}
+
+.inicio .slider-frame .imagen1 {
+    position: relative;
+    background: url(../imagenes/slider_inicio.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .slider-frame .imagen2 {
+    position: relative;
+    background: url(../imagenes/slider_historia.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .slider-frame .imagen3 {
+    position: relative;
+    background: url(../imagenes/slider_gigantes.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .slider-frame .imagen4 {
+    position: relative;
+    background: url(../imagenes/slider_cabezudos.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .slider-frame .imagen5 {
+    position: relative;
+    background: url(../imagenes/slider_contacto.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .slider-frame .fondo-slider {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    opacity: 0.7;
+}
+
+.inicio .slider-frame h2 {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    margin-top: 20%;
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+@keyframes mover {
+    0% {margin-left: 0;}
+    15% {margin-left: 0;}
+
+    20% {margin-left: -200%;}
+    35% {margin-left: -200%;}
+
+    40% {margin-left: -400%;}
+    55% {margin-left: -400%;}
+
+    60% {margin-left: -600%;}
+    75% {margin-left: -600%;}
+
+    80% {margin-left: -800%;}
+    95% {margin-left: -800%;}
+}
+
+
+/* ESTILOS DE LA PÁGINA HISTORIA */
+.historia {
+    background: #DCDFD9;
+    color: #1b3231;
+    grid-column: 1/4;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.historia .titulo-historia {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.historia .container-historia {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.historia .container-historia::after {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #1b3231;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    z-index: 1;
+}
+
+.historia .container-historia .evento-historia {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+.historia .container-historia .evento-historia::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    background: #DCDFD9;
+    border: 2px solid #1b3231;
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 9px);
+    left: calc(50% - 9px);
+}
+
+.historia .container-historia .evento-historia .fecha-historia {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: calc(42% + 20px);
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.historia .container-historia .evento-historia .foto-historia {
+    width: 42%;
+    border: 10px solid #fff;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    padding: 2em;
+}
+
+.historia .container-historia .evento-historia .foto-historia::after {
+    content: "";
+	display: block;
+	border: 20px solid transparent;
+	border-left: 20px solid #fff;
+	position: absolute;
+	right: -50px;
+	top: calc(50% - 20px);
+}
+
+.historia .container-historia .evento-historia .foto-historia img {
+    width: 100%;
+	vertical-align: top;
+}
+
+.historia .container-historia .evento-historia:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.historia .container-historia .evento-historia:nth-child(even) .fecha-historia {
+    justify-content: end;
+}
+
+.historia .container-historia .evento-historia:nth-child(even) .foto-historia::after {
+    content: "";
+	border: 20px solid transparent;
+	border-right: 20px solid #fff;
+	right: initial;
+	left: -50px;
+}
+
+
+/* ESTILOS DE LA PÁGINA DE GIGANTES */
+.gigantes, .cabezudos {
+    grid-column: 1/4;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    background: #DCDFD9;
+}
+
+.gigantes h1, .cabezudos h1 {
+    color: #1b3231;;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+}
+
+.gigantes .galeria-container-gigantes, .cabezudos .galeria-container-cabezudos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 550px;
+    padding: 20px;
+    grid-gap: 10px;
+    grid-row-gap: 50px;
+}
+
+.gigantes .galeria-container-gigantes .galeria-item-gigantes, .cabezudos .galeria-container-cabezudos .galeria-item-cabezudos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+
+}
+
+.gigantes .galeria-container-gigantes .galeria-item-gigantes .galeria-imagen-gigantes, .cabezudos .galeria-container-cabezudos .galeria-item-cabezudos .galeria-imagen-cabezudos {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.gigantes .galeria-container-gigantes .galeria-item-gigantes .galeria-imagen-capa, .cabezudos .galeria-container-cabezudos .galeria-item-cabezudos .galeria-imagen-capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 103, 123, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+.gigantes .galeria-container-gigantes .galeria-item-gigantes:active .galeria-imagen-gigantes,
+.gigantes .galeria-container-gigantes .galeria-item-gigantes:hover .galeria-imagen-gigantes,
+.cabezudos .galeria-container-cabezudos .galeria-item-cabezudos:active .galeria-imagen-cabezudos,
+.cabezudos .galeria-container-cabezudos .galeria-item-cabezudos:hover .galeria-imagen-cabezudos {
+    transform: scale(1.3);
+}
+
+.gigantes .galeria-container-gigantes .galeria-item-gigantes:active > .galeria-imagen-capa,
+.gigantes .galeria-container-gigantes .galeria-item-gigantes:hover > .galeria-imagen-capa,
+.cabezudos .galeria-container-cabezudos .galeria-item-cabezudos:active > .galeria-imagen-capa,
+.cabezudos .galeria-container-cabezudos .galeria-item-cabezudos:hover > .galeria-imagen-capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gigantes .galeria-container-gigantes .galeria-item-gigantes .galeria-titulo-gigantes, .cabezudos .galeria-container-cabezudos .galeria-item-cabezudos .galeria-titulo-cabezudos {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: #333;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+/* ESTILOS DE LA PÁGINA DE CONTACTO */
+main {
+    grid-column: 1/4;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px;
+    padding-top: 150px;
+    background: url(../imagenes/fondo_contacto2.jpeg) no-repeat;
+    background-size: cover;
+}
+
+main .container {
+    grid-column: 2/3;
+    background: #fff;
+    width: 80%;
+    max-width: 800px;
+    padding: 25px 40px 10px 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+main .container .text {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    background: #333;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main .container form {
+    padding: 10px 0 0 0;
+}
+
+main .container form .form-row {
+    display: block;
+    margin: 32px 0;
+}
+
+main .container form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    margin: 35px 0;
+    position: relative;
+}
+
+main .container form .submit-btn {
+    display: flex;
+    justify-content: center;
+}
+
+main .container form .form-row .textarea {
+    height: 70px;
+}
+
+main .container form .form-row .input-data input, main .container form .form-row textarea {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+main .container form .form-row textarea {
+    resize: none;
+    padding-top: 10px;
+}
+
+main .container form .form-row .input-data input:hover ~ label, main .container form .form-row textarea:hover ~ label,
+main .container form .form-row .input-data input:focus ~ label, main .container form .form-row textarea:focus ~ label,
+main .container form .form-row .input-data input:valid ~ label, main .container form .form-row textarea:valid ~ label {
+    transform: translateY(-20px);
+    color: #3498db;
+    font-size: 14px;
+}
+
+main .container form .form-row .input-data label {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+main .container form .form-row .textarea label {
+    width: 100%;
+    bottom: 40px;
+    background: #fff;
+}
+
+main .container form .form-row .input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+
+main .container form .form-row .input-data .underline:before,
+main .container form .form-row .input-data .underline:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+main .container form .form-row .input-data input:hover ~ .underline:before, main .container form .form-row textarea:hover ~ .underline:before,
+main .container form .form-row .input-data input:focus ~ .underline:before, main .container form .form-row textarea:focus ~ .underline:before,
+main .container form .form-row .input-data input:valid ~ .underline:before, main .container form .form-row textarea:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+main .container form .submit-btn .input-data {
+    height: 45px !important;
+    width: 40% !important;
+    overflow: hidden;
+}
+
+main .container form .submit-btn .input-data .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    transition: all 0.3s;
+}
+
+main .container form .submit-btn .input-data:hover .inner {
+    left: 0;
+}
+
+main .container form .submit-btn .input-data input {
+    position: relative;
+    z-index: 2;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    /* ESTILOS PÁGINA DE GIGANTES */
+    .gigantes .galeria-container-gigantes, .cabezudos .galeria-container-cabezudos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ESTILOS DEL FOOTER */
+    footer .container_footer {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    footer .container_footer .section_colaborador h2 {
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    footer .container_footer .section_colaborador, footer .container_footer .about_us {
+        grid-column: 1/3;
+    }
+
+    footer .container_footer .section_colaborador .img_colaborador {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer .container_footer .section_colaborador .img_colaborador img {
+        margin: auto 10px;
+    }
+
+    footer .container_footer .quick_links {
+        grid-column: 1/2;
+    }
+
+    footer .container_footer .contact_us {
+        grid-column: 2/3;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    /* ESTILOS DEL HEADER */
+    header {
+        padding: 20px 7%;
+    }
+
+    header label {
+        display: none;
+    }
+
+    header .navbar {
+        display: initial;
+        position: initial;
+        border-top: none;
+    }
+
+    header .navbar ul li {
+        width: initial;
+    }
+
+    header .navbar ul li ul {
+        position: absolute;
+        width: 200px;
+    }
+
+    #menu_hamburguer:checked ~.navbar {
+        display: initial;
+    }
+
+    /* ESTILOS DEL FOOTER */
+    footer .container_footer {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    footer .container_footer .section_colaborador {
+        grid-column: 1/4;
+    }
+
+    footer .container_footer .about_us {
+        grid-column: 1/2;
+    }
+
+    footer .container_footer .quick_links {
+        grid-column: 2/3;
+    }
+
+    footer .container_footer .contact_us {
+        grid-column: 3/4;
+    }
+
+
+    /* ESTILOS PÁGINA DE GIGANTES */
+    .gigantes .galeria-container-gigantes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cabezudos .galeria-container-cabezudos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 50px;
+    }
+
+
+    /* ESTILOS DEL FORMULARIO */
+    
+    main .container .text {
+        font-size: 35px;
+    }
+
+    main .container form {
+        padding: 30px 0 0 0;
+    }
+
+    main .container form .form-row {
+        display: flex;
+    }
+
+    main .container form .form-row .input-data {
+        margin: 0 20px;
+    }
+
+    main .container form .submit-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    main .container form .submit-btn {
+        display: flex;
+        justify-content: left;
+    }
+
+    main .container form .submit-btn .input-data {
+        width: 25% !important;
+    }
+}
+
+/* Se hará un diseño para imprimir de la página inicial */
+@media print and (orientation: portrait) {   
+    /* Le indicamos ninguna animación para que salga la primera imagen del slider */
+    .inicio .slider-frame {
+        animation: none;
+    }
+}
