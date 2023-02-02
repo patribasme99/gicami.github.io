@@ -432,6 +432,56 @@ footer .container_footer .contact_us .info li span {
 	left: -50px;
 }
 
+#menu_historia .logo {
+    color: #1b3231;
+}
+
+#container-toggle {
+    background-color: #f8f8f8;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    box-shadow: inset 4px 4px 6px #1b3231;
+    margin: 0px auto;
+    margin-top: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    transform: scale(.7);
+    background-color: #1b3231;
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px #1b3231, -3px -3px 8px #1b3231;
+}
+
+#logo_historia {
+    color: #1b3231;
+}
+
+#logo_historia.active {
+    color: #fff;
+}
+
+#container-toggle.active #toggle {
+    left: 20px;
+    background-color: linear-gradient(145deg, #D8D8D8, #ffffff);
+}
+
+#container-toggle.active {
+    box-shadow: inset 4px 4px 6px #cecece;
+}
+
+#historia_oscuro.active {
+    background-color: rgba(23, 23, 23);
+    color: #fff;
+}
+
 
 /* ESTILOS DE LA PÁGINA DE GIGANTES */
 .gigantes, .cabezudos {
