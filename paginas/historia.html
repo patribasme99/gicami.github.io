@@ -11,8 +11,8 @@
     <title>GICAMI</title>
 </head>
 <body>
-    <header id="menu">
-        <a href="#" class="logo">GICAMI</a>
+    <header id="menu_historia">
+        <a href="#" class="logo" id="logo_historia">GICAMI</a>
         <input type="checkbox" id="menu_hamburguer">
         <label for="menu_hamburguer">MENU</label>
         <nav class="navbar">
@@ -26,11 +26,16 @@
                     </ul>
                 </li>
                 <li><a href="contacto.html">CONTACTO</a></li>
+                <li>
+                    <div id="container-toggle">
+                        <div id="toggle"></div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main class="historia">
+    <main class="historia" id="historia_oscuro">
         <div class="titulo-historia"><h1>NUESTRA HISTORIA</h1></div>
         <div class="container-historia">
             <div class="evento-historia">
@@ -162,6 +167,7 @@
 </body>
 </html>
 <script src="../js/app.js"></script>
+<script src="../js/toggle.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
       AOS.init({
