@@ -5,5 +5,5 @@ var logo = document.getElementById("logo_historia");
 toggle.onclick = function() {
     toggle.classList.toggle("active");
     historia.classList.toggle("active");
-    logo.classList.toggle("active");
+    logo.classList.toggle("active");  
 }
